@@ -1,0 +1,568 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  padding-top: 128px;
+}
+
+header{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+
+
+.arrow{
+  display: flex;
+
+}
+
+.paddingTop-5{
+  padding-top: 5rem;
+}
+
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  text-decoration: none;
+  position: absolute;
+  height: 128px;
+  width: 100%;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.bg-light{
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 00px 3px 3px 2px  rgba(64, 66, 68, .25)!important;
+  background-color: rgb(255, 255, 255, .8) !important;
+}
+
+nav button{
+  width: fit-content;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+
+button{
+  width: 165px;
+  height: 42px;
+  background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+  border: none;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 4px;
+font-family: 'Century Gothic';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+color: white !important;
+display: flex;
+flex-direction: row !important;
+align-items: center;
+justify-content: center;
+text-align: center;
+letter-spacing: 0.0125em;
+cursor: pointer;
+position: relative;
+transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+button i{
+  padding-left: 32px;
+}
+
+/*start*/
+
+
+
+
+button:before, button:after {
+ 
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+/* On Hover the 'before' sudo element's is added an opacity of 0 and the */
+/* element is scaled to 2 times. */
+button:hover:before {
+  animation: anim 500ms ease forwards ;
+  border: 5px solid #C84E89;
+}
+
+.buttonClicked:after {
+  animation: anim 500ms ease forwards ;
+  border: 5px solid #C84E89;
+}
+
+
+
+@keyframes anim {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    border: 5px solid #C84E89;
+  }
+  50% {
+    border-color: #C84E89;
+  }
+  100% {
+    transform: scale( 1.2, 2);
+    opacity: 0;
+    border: 0px solid #C84E89;
+  }
+}
+
+
+ 
+
+/*end*/
+
+
+.colorSec{
+  background: linear-gradient(0.02deg, rgba(110, 61, 207, 0.1) 0%, rgba(46, 230, 196, 0.1) 99.97%);
+}
+
+
+.arrow{
+  display: flex;
+}
+
+.arrow img{
+  width:20%;
+}
+
+
+
+.underline {
+  position: relative
+ }
+ 
+.underline::after{
+  content:"";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: linear-gradient(0.25turn, #C84E89, #F15F79);
+}
+
+
+
+
+
+
+.nav, ul li{
+  padding-right: 64px;
+  color: #2e2e2e !important;
+}
+
+
+.nav, a{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  color: #2e2e2e !important;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.nav, a:hover {
+animation: menuHover;
+color: #2e2e2e !important;
+
+  border-image: linear-gradient(0.25turn, #C84E89, #F15F79);
+  border-image-slice: 1;
+  border-bottom: 10px solid rgba(0, 0, 0, 1);
+  cursor: pointer;
+  position: relative;
+  transition: .2s linear;
+  text-decoration: none;
+}
+
+
+
+.nav-item{
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+.navRight h6.active {
+  border-image: linear-gradient(0.25turn, #C84E89, #F15F79);
+  border-image-slice: 1;
+  
+}
+
+@keyframes menuHover {
+  from {border-bottom: 0px solid rgba(0, 0, 0, 1);}
+  to  {border-bottom: 10px solid rgba(0, 0, 0, 1);}
+}
+
+
+.wrapper{
+  background: linear-gradient(337.61deg, rgba(110, 61, 207, 0.1) -0.3%, rgba(46, 230, 196, 0.1) 100%);
+
+margin-top: 128px;
+}
+
+
+
+.card{
+  height: 100%;
+  border: none;
+  background: none;
+}
+
+
+
+.card-button{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+  justify-content: flex-end;
+}
+
+.card-title{
+  padding-bottom: 8px;
+}
+
+footer{
+  width:100%;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #232526;
+  padding: 32px;
+}
+
+.tiltElement2{
+  padding-bottom: 8px;
+}
+
+.backgroundLogo{
+  background-image: url(/images/LogoV2.svg);
+}
+
+.link{
+  display: flex;
+  flex-direction: row;
+align-items: center;
+justify-content: left;
+}
+
+.link img{
+  padding: 0 32px 0 0;
+}
+
+.socialLinks{
+  padding-top: 32px;
+}
+
+.hero{
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+  text-align: Left;
+  width: 100vw;
+  padding: 16px;
+
+  height: 128px;
+}
+
+.cloudCase{
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  width: 100%;
+  justify-content: space-evenly;  
+ 
+}
+
+#cloud1{
+  align-self: flex-start;
+  position: relative;
+  animation-name: animCloud1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+#cloud2{
+  align-self: center;
+  position: relative;
+  animation-name: animCloud2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+#cloud3{
+  align-self: flex-end;
+  position: relative;
+  animation-name: animCloud3;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+
+
+@keyframes animBob {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:10px;}
+  100%  {left:0px; top:0px;}
+  
+}
+
+@keyframes animCloud1 {
+  0%   {left:5px; top:5px;}
+  25%  {left:0px; top:10px;}
+  50%  {left:5px; top:5px;}
+  75%  {right:0px; top:0px;}
+  100%  {left:5px; top:5px;}
+}
+
+@keyframes animCloud2 {
+  0%   {left:0px; top:0px;}
+  25%  {left:5px; top:5px;}
+  50%  {left:0px; top:10px;}
+  75%  {right:5px; top:5px;}
+  100%  {left:0px; top:0px;}
+}
+
+@keyframes animCloud3 {
+  0%   {left:0px; top:10px;}
+  25%  {left:5px; top:5px;}
+  50%  {left:0px; top:0px;}
+  75%  {right:5px; top:5px;}
+  100%  {left:0px; top:10px;}
+}
+
+
+
+
+
+#readMore1{
+  grid-area: readMoreButton;
+
+padding-top: 32px;
+align-self: flex-end;
+justify-self: baseline;
+
+
+}
+
+
+
+#caseStudy1{
+  grid-area: card1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content 1fr 1fr;
+    grid-template-areas:
+  "caseStudyImg"
+  "caseStudyTitle"
+  "readMoreButton"
+;
+
+}
+
+#caseStudy2{
+  grid-area: card2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content 1fr 1fr;
+    grid-template-areas:
+  "caseStudyImg"
+  "caseStudyTitle"
+  "readMoreButton"
+;
+}
+
+
+#caseStudy3{
+  grid-area: card3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content 1fr 1fr;
+    grid-template-areas:
+  "caseStudyImg"
+  "caseStudyTitle"
+  "readMoreButton"
+;
+}
+
+#caseStudy4{
+  grid-area: card4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content 1fr 1fr;
+    grid-template-areas:
+  "caseStudyImg"
+  "caseStudyTitle"
+  "readMoreButton"
+;
+}
+
+
+.caseStudyImg{
+  grid-area: caseStudyImg;
+ 
+}
+
+.caseStudyImg img{
+  width: 100%;
+  
+  
+  
+}
+
+
+
+
+.caseStudyTitle{
+  grid-area: caseStudyTitle;
+ text-align: left;
+ height: fit-content;
+}
+
+
+
+h1{
+
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 122px;
+
+
+  letter-spacing: -0.0154em;
+  text-transform: uppercase;
+  }
+
+h2{
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 76px;
+height: 80px;
+text-align: left;
+letter-spacing: -0.005em;
+margin: 0;
+
+}
+
+
+h3{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 60px;
+margin: 0;
+}
+
+
+
+h4{
+  font-family: 'Century Gothic';
+font-style: normal;
+font-weight: 700;
+font-size: 34px !important;
+line-height: 42px;
+
+letter-spacing: 0.0025em;
+margin: 0px;
+
+
+}
+
+h5{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+margin: 0px;
+
+}
+
+h6{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 25px;
+text-align: left;
+letter-spacing: 0.0015em;
+
+margin: 0;
+
+}
+
+h6 a{
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+p{
+  font-family: 'Century Gothic';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 200%;
+/* or 32px */
+
+letter-spacing: 0.005em;
+}
+
+@media only screen and (max-width: 1000px) {
+ 
+  .wrapper{
+    display: grid;
+  margin:auto;
+    grid-row-gap: 64px;
+    grid-column-gap: 64px;
+    grid-template-columns: 16px 1fr 16px;
+    grid-template-rows: 5fr;
+  min-width: 1316px;
+    max-width: 1920px;
+    grid-template-areas:
+    ". hero ."
+    ". card1 ."
+    ". card2 ."
+    ". card3 ."
+    ". card4 ."
+  ;
+  }
+
+}
